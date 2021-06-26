@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {Container, ISourceOptions, Main} from "tsparticles";
+import { Component } from '@angular/core';
+import { Container, ISourceOptions, Main } from "ng-particles";
 
 @Component({
   selector: 'app-root',
@@ -14,13 +14,12 @@ export class AppComponent {
   particlesOptions: ISourceOptions = {
     backgroundMode: {
       enable: true,
-      zIndex: 0
     },
     background: {
-          color: {
-            value: "#011024"
-          }
-        },
+      color: {
+        value: "#000000"
+      }
+    },
     particles: {
       number: {
         value: 1000,
@@ -30,7 +29,7 @@ export class AppComponent {
         }
       },
       color: {
-        value: "#00fff3"
+        value: "#fdfdfd"
       },
       shape: {
         type: "circle",
@@ -40,7 +39,7 @@ export class AppComponent {
         },
       },
       opacity: {
-        value: 0.6,
+        value: 0.4,
         random: true,
         anim: {
           enable: true,
@@ -50,13 +49,13 @@ export class AppComponent {
         }
       },
       size: {
-        value: 3,
+        value: 1.5,
         random: true,
         anim: {
           enable: true,
-          speed: 2,
+          speed: 1,
           size_min: 0.1,
-          sync: false
+          sync: true
         }
       },
       line_linked: {
@@ -64,15 +63,15 @@ export class AppComponent {
       },
       move: {
         enable: true,
-        speed: 1,
+        speed: 0.05,
         direction: "none",
-        random: false,
+        random: true,
         straight: false,
         out_mode: "out",
         bounce: false,
         attract: {
           enable: false,
-          rotateX: 600,
+          rotateX: 1200,
           rotateY: 1200
         }
       }
@@ -98,121 +97,14 @@ export class AppComponent {
     },
     retina_detect: true
   };
-  //   backgroundMode: {
-  //     enable: true
-  //   },
-  //   background: {
-  //     color: {
-  //       value: "#011024"
-  //     }
-  //   },
-  //   fpsLimit: 60,
-  //   interactivity: {
-  //     detectsOn: "canvas",
-  //     events: {
-  //       onClick: {
-  //         enable: true,
-  //         mode: "push"
-  //       },
-  //       onHover: {
-  //         enable: true,
-  //         mode: "repulse"
-  //       },
-  //       resize: true
-  //     },
-  //     modes: {
-  //       bubble: {
-  //         distance: 400,
-  //         duration: 4,
-  //         opacity: 0.8,
-  //         size: 40,
-  //       },
-  //       push: {
-  //         quantity: 4
-  //       },
-  //       repulse: {
-  //         distance: 75,
-  //         duration: 20
-  //       }
-  //     }
-  //   },
-  //   particles: {
-  //     color: {
-  //       value: ["#f67e7d", "#843b62", "#621940"]
-  //     },
-  //     links: {
-  //       color: "#ffb997",
-  //       enable: true,
-  //       distance: 150,
-  //       opacity: 0.5,
-  //     },
-  //     size: {
-  //       value: 5,
-  //       random: {
-  //         enable: true,
-  //         minimumValue: 1
-  //       },
-  //       animation: {
-  //         enable: true,
-  //         speed: 2.5,
-  //         minimumValue: 1
-  //       }
-  //     },
-  //     opacity: {
-  //       value: 0.8,
-  //       random: {
-  //         enable: true,
-  //         minimumValue: 0.4
-  //       }
-  //     },
-  //     collisions: {
-  //       enable: false,
-  //     },
-  //     move: {
-  //       // direction: "none",
-  //       enable: true,
-  //       // outMode: "bounce",
-  //       // random: false,
-  //       // straight: false,
-  //       speed: 6,
-  //     },
-  //     // number: {
-  //     //   density: {
-  //     //     enable: true,
-  //     //     value_area: 1200,
-  //     //   },
-  //     //   value: 200,
-  //     //   max: 500
-  //     // },
-  //     // opacity: {
-  //     //   value: 0.5,
-  //     // },
-  //     shape: {
-  //       type: "circle"
-  //     },
-  //     // size: {
-  //     //   random: true,
-  //     //   value: 4
-  //     // }
-  //   },
-  //   detectRetina: true
-  // };
 
-particlesLoaded(container
-:
-Container
-):
-void {
-  console.log(container);
-}
+  particlesLoaded(container: Container): void {
+    console.log(container);
+  }
 
-particlesInit(main
-:
-Main
-):
-void {
-  console.log(main);
+  particlesInit(main: Main): void {
+    console.log(main);
 
-  // Starting from 1.19.0 you can add custom presets or shape here, using the current tsParticles instance (main)
-}
+    // Starting from 1.19.0 you can add custom presets or shape here, using the current tsParticles instance (main)
+  }
 }

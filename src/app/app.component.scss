@@ -1,8 +1,6 @@
 @import '/src/main-styles.scss';
 
 .centered-content {
-  width: 100px;
-  height: 30px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -13,27 +11,30 @@
   align-items: center;
 
   h1 {
-    font-size: 2em;
-    margin-top: 50px;
+    font-family: "Libre Baskerville", serif;
+    font-size: 1.8em;
+    margin-top: 25px;
     opacity: 1;
     position: relative;
-    color: #e3e3eb;
+    color: #ffffff;
     font-weight: 400;
     text-align: center;
     margin-right: 20px;
-    margin-left: 10px;
+    margin-left: 20px;
     padding-bottom: 10px;
     display: flex;
     border-bottom: 3px solid #8b8bff;
-    letter-spacing: 10px;
+    letter-spacing: 7px;
 
     > div {
       position: relative;
       display: inline-block;
+
       + div {
         display: block;
       }
     }
+
     span {
       letter-spacing: normal;
       display: block;
@@ -42,18 +43,19 @@
       font-style: italic;
       position: relative;
       z-index: 2;
+
       &:before,
       &:after {
         content: "";
         width: 43%;
         height: 3px;
-        border-radius: 5px;
         background: #8b8bff;
         position: absolute;
         right: 0;
         z-index: 1;
         top: 0.5em;
       }
+
       &:after {
         left: 0;
       }
