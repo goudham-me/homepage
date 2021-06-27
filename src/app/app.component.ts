@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Container, ISourceOptions, Main } from "ng-particles";
+import { Container, ISourceOptions, Main } from "tsparticles";
 
 @Component({
   selector: 'app-root',
@@ -25,11 +25,12 @@ export class AppComponent {
         value: 1000,
         density: {
           enable: true,
-          value_area: 800
+          value_area: 900
         }
       },
       color: {
         value: "#fdfdfd"
+
       },
       shape: {
         type: "circle",
@@ -43,17 +44,17 @@ export class AppComponent {
         random: true,
         anim: {
           enable: true,
-          speed: 1.2,
+          speed: 1.3,
           opacity_min: 0.1,
           sync: false
         }
       },
       size: {
-        value: 1.5,
+        value: 2,
         random: true,
         anim: {
           enable: true,
-          speed: 1,
+          speed: 1.3,
           size_min: 0.1,
           sync: true
         }
