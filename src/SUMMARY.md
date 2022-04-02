@@ -1,6 +1,6 @@
 # Summary
 
-# Goudham's Digital Garden
+# 🌳 Goudham's Digital Garden 🌳
 
 ---
 
@@ -10,13 +10,13 @@
 
 ---
 
-# Musings
+# Musings 📝
 
 - [Blog]()
     - [Why I Don't Like Java Anymore]()
 
 ---
 
-# My Second Brain
+# My Second Brain 🧠
 
 - [My IdeaVim Config]()
