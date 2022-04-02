@@ -1,0 +1,6 @@
+[book]
+authors = ["sgoudham"]
+language = "en"
+multilingual = false
+src = "src"
+title = "My Digital Garden"
