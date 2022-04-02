@@ -34,3 +34,4 @@ can be bothered to write them :P
 <a href="https://github.com/sgoudham" target="_blank" rel="noopener noreferrer"><img src="images/icons/github.png"></a>
 <a href="https://linkedin.com/in/sgoudham" target="_blank" rel="noopener noreferrer"><img src="images/icons/linkedin.png"></a>
 <a href="https://twitter.com/RealGoudham" target="_blank" rel="noopener noreferrer"><img src="images/icons/twitter.png"></a>
+<a href="https://discord.bio/p/hammy" target="_blank" rel="noopener noreferrer"><img src="images/icons/discord.png"></a>
