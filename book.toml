@@ -1,6 +1,10 @@
 [book]
-authors = ["sgoudham"]
+title = "Goudham's Digital Garden"
+authors = ["Goudham Suresh"]
+description = "A digital garden to store my ideas and thoughts"
 language = "en"
 multilingual = false
 src = "src"
-title = "My Digital Garden"
+
+[output.html]
+default-theme = "ayu"
