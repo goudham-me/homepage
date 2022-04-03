@@ -4,9 +4,9 @@
 
 ---
 
-- [Hey! 👋](index.md)
+- [Hey 👋](index.md)
 - [Personal Projects 🦀](personal_projects/personal_projects.md)
-- [Cool Things I've Watched/Read 📓]()
+- [Adored Resources 📓]()
 
 ---
 

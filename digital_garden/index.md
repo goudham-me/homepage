@@ -1,4 +1,4 @@
-<h1 align="center">👋 Hey, I'm Goudham Suresh</h1>
+<h1 align="center">Hey 👋, I'm Goudham</h1>
 <div align="center">
     <h3>Software Engineer @ BBC <br> Second Year Graduate Apprentice @ University of Glasgow</h3>
     <img src="images/me.png" alt="Goudham">

@@ -1,4 +1,4 @@
-<h1 align="center">Personal Projects</h1>
+<h1 align="center">Personal Projects 🦀</h1>
 
 <div align="center">
     <img src="../images/projects/macbook.png">
@@ -43,7 +43,7 @@ I wouldn't say any of the projects listed above are **that** impressive or mind-
 pivotal role in building up the understanding that I have now. (And the understanding that I do have now is still so
 minuscule - **cue existential-crisis aaaaaaaaaaaAAAAAAAAA**)
 
-At the time of writing, I'm at the beginning of my career, and I personally can't wait to develop further and dive into
+At the time of writing, I'm at the very beginning of my career, and I personally can't wait to develop further and dive into
 more and more rabbit holes that working on these projects allows me too! And of course, I hope to bring _you_ along for
 ride too. Watch this space :D
 
