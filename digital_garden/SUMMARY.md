@@ -5,7 +5,7 @@
 ---
 
 - [Hey! 👋](index.md)
-- [Projects 🦀](digital_garden/projects/projects.md)
+- [Projects 🦀](projects/projects.md)
 - [Cool Things I've Watched/Read 📓]()
 
 ---

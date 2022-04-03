@@ -4,7 +4,7 @@ authors = ["Goudham Suresh"]
 description = "A digital garden to store my ideas and thoughts"
 language = "en"
 multilingual = false
-src = "src"
+src = "digital_garden"
 
 [output.html]
 default-theme = "ayu"
