@@ -22,10 +22,11 @@ myself...
 
 > What the f**k is going on? private static void wha? new Scanner()? oBjEcTs, what are those?
 
-However, at the same time, I was... excited! Even though I didn't know how to define an Arraylist or read in files or 
-whatever, some part of me was excited _because_ I didn't know. It was an opportunity for me to learn and work towards 
-proficiency. As of late, that feeling for learning more about the java programming language has increasingly shifted
-towards another language... **Rust!**
+However, at the same time, I was... excited! Even though I didn't know how to define an Arraylist or read in files or
+whatever, some part of me was excited _because_ I didn't know. It was an opportunity for me to learn and work towards
+proficiency. Unfortunately, as of late, that feeling has increasingly shifted towards another language.
+
+🦀 **Rust** 🦀
 
 ## It's not you... It's me!
 
