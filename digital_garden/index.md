@@ -16,12 +16,22 @@ piqued my interest.
 
 My main motivation is definitely to try and turn this space into a **_digital garden_**.
 
-### What do I do?
+### What do you do?
 
 I am working within a JVM based team that focuses on programme metadata delivery utilizing microservice architecture in
 a serverless manner.
 
-### What are my interests?
+> You: _o.O What?_ 
+
+I help my team deliver TV & Non-TV schedules internally and externally with the help of Amazon Web Services.
+
+> You: _I guess that's a little better..._
+
+I let you know when EastEnders is on TV :D
+
+> You: _Finally, he's speaking English!_
+
+### What are your interests?
 
 My personal interests vary _a lot_ but are currently focused towards systems design & low-level programming in languages
 such as **C**, **Go** & _especially_ 🦀 **Rust** 🦀 so you can expect a lot of blog posts in that domain... whenever I
