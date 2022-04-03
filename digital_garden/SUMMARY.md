@@ -19,4 +19,4 @@
 # 📝 Musings 📝
 
 - [Blog]()
-    - [Why I Don't Like Java Anymore]()
+    - [Why I Don't Like Java Anymore](blog/articles/why_i_dont_like_java_anymore.md)
