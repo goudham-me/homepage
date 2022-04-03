@@ -18,5 +18,5 @@
 
 # 📝 Musings 📝
 
-- [Blog]()
+- [Blog](blog/blog.md)
     - [Why I Don't Like Java Anymore](blog/articles/why-i-dont-like-java-anymore.md)
