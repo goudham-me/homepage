@@ -5,14 +5,14 @@
 ---
 
 - [Hey 👋](index.md)
-- [Personal Projects 🦀](personal_projects/personal_projects.md)
+- [Personal Projects 🦀](personal-projects/personal-projects.md)
 - [Adored Resources 📓]()
 
 ---
 
 # 🧠 My Second Brain 🧠
 
-- [My IdeaVim Config]()
+- [IdeaVim Config]()
 
 ---
 
