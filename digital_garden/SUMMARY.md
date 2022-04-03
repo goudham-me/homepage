@@ -5,7 +5,7 @@
 ---
 
 - [Hey! 👋](index.md)
-- [Projects 🦀](projects/projects.md)
+- [Personal Projects 🦀](personal_projects/personal_projects.md)
 - [Cool Things I've Watched/Read 📓]()
 
 ---
