@@ -10,13 +10,13 @@
 
 ---
 
-# Musings 📝
+# 🧠 My Second Brain 🧠
 
-- [Blog]()
-    - [Why I Don't Like Java Anymore]()
+- [My IdeaVim Config]()
 
 ---
 
-# My Second Brain 🧠
+# 📝 Musings 📝
 
-- [My IdeaVim Config]()
+- [Blog]()
+    - [Why I Don't Like Java Anymore]()
