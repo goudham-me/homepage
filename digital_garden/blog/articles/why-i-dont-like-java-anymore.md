@@ -10,7 +10,15 @@ So...
 
 and honestly, I'm kinda bummed about it. 
 
-TODO
+# 
+
+# It's not you.. It's me!
+
+// talk about rust and the wonderful world of low-level systems programming
+
+// talk about how your personal interests have veered away from what java is trying to solve
+
+// talk about the really cool features that java is doing though! java 18 and the pattern matching in the previews
 
 - - - - 
 
