@@ -12,9 +12,9 @@ But before you click away to check twitter for the 349th time today!
 It would be pretty cool if you had a look through the articles that I have wrote. I've tried my best to avoid brain
 dumping but rather, tell a narrative around the thing I actually want to talk about.
 
-- - - - 
-
 <br>
+
+- - - - 
 
 <div align="center" style="padding-top: 8px">
     <a style="padding-left: 4px; padding-right: 4px" href="https://github.com/sgoudham" target="_blank" rel="noopener noreferrer"><img src="../images/icons/github.png"></a>
