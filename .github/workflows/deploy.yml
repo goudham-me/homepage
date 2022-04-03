@@ -18,7 +18,6 @@ jobs:
           echo `pwd`/mdbook >> $GITHUB_PATH
       - name: Build mdBook
         run: mdbook build
-      - name: Deploy mdBook
       - uses: garygrossgarten/github-action-scp@release
         with:
           local: build
