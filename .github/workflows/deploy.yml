@@ -23,6 +23,7 @@ jobs:
           local: build
           remote: /var/www/goudham.me/html
           host: ${{ secrets.HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
           privateKey: ${{ secrets.SSH_PRIVATE_KEY}}
           rmRemote: true
           dotfiles: true
