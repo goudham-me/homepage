@@ -21,15 +21,15 @@ My main motivation is definitely to try and turn this space into a **_digital ga
 I am working within a JVM based team that focuses on programme metadata delivery utilizing microservice architecture in
 a serverless manner.
 
-> You: _o.O What?_ 
+> _o.O What?_ 
 
 I help my team deliver TV & Non-TV schedules internally and externally with the help of Amazon Web Services.
 
-> You: _I guess that's a little better..._
+> _I guess that's a little better..._
 
 I let you know when EastEnders is on TV :D
 
-> You: _Finally, he's speaking English!_
+> _Finally, he's speaking English!_
 
 ### What are your interests?
 
