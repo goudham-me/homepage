@@ -5,7 +5,7 @@
 ---
 
 - [Hey 👋](index.md)
-- [Personal Projects 🦀](personal-projects/personal-projects.md)
+- [Personal Projects 🦀](personal-projects.md)
 - [Adored Resources 📓]()
 
 ---
@@ -18,5 +18,5 @@
 
 # 📝 Musings 📝
 
-- [Blog](blog/blog.md)
-    - [Why I Don't Like Java Anymore](blog/articles/why-i-dont-like-java-anymore.md)
+- [Blog](blog.md)
+    - [Why I Don't Like Java Anymore](blog/why-i-dont-like-java-anymore.md)
