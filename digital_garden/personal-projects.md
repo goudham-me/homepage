@@ -7,7 +7,7 @@
 I have developed quite a few projects over the last few years, varying from discord bots to public libraries to
 command-line applications. I've _always_ wanted a space other than Github to showcase them... so here we are. I'll only
 be showcasing my _absolute favourite_ ones here, so please check out
-my [github](https://github.com/sgoudham?tab=repositories&type=source) to see all of them!
+my [GitHub](https://github.com/sgoudham?tab=repositories&type=source) to see all of them!
 
 > **Warning**: The older ones have a _significant_ drop in quality compared to the more recent ones.
 
