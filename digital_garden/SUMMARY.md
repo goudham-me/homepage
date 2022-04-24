@@ -12,7 +12,7 @@
 
 # 🧠 My Second Brain 🧠
 
-- [IdeaVim Config]()
+- [My IdeaVim Config](my-second-brain/my-ideavim-config.md)
 
 ---
 
