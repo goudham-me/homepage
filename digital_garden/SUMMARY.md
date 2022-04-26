@@ -6,17 +6,26 @@
 
 - [Hey 👋](index.md)
 - [Personal Projects 🦀](personal-projects.md)
-- [Adored Resources 📓]()
+- [FAQ 🙋]()
 
 ---
 
 # 🧠 My Second Brain 🧠
 
 - [My IdeaVim Config](my-second-brain/my-ideavim-config.md)
+- [Adored Resources 📓]()
 
 ---
 
 # 📝 Musings 📝
 
 - [Blog](blog.md)
-    - [Why I Don't Like Java Anymore](blog/why-i-dont-like-java-anymore.md)
+    - [Tech]()
+        - [Why I Don't Like Java Anymore](blog/tech/why-i-dont-like-java-anymore.md)
+        - [Safety In... _Unsafe Rust?_]()
+    - [Non-Tech]()
+        - [The Beauty Of Pingu]()
+
+# ❗🇨 🇭 🇦 🇷 🇮 🇹 🇾
+
+- [Scottish !charity Overwatch Tournament]()
