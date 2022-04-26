@@ -110,4 +110,4 @@ behind _"smaller, productivity-oriented Java language features."_
 
 - - - - 
 
-{{#include templates/footer.md}}
+{{#include ../templates/footer.md}}
