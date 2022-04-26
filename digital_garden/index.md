@@ -12,7 +12,10 @@ The main motivations behind this space actually stem from one of my previous uni
 exploring and explaining the idea of [digital gardening](https://maggieappleton.com/garden-history), and it immediately
 piqued my interest.
 
-> "Gardens present information in a richly linked landscape that grows slowly over time" - Maggie Appleton
+```admonish quote ""
+_"Gardens present information in a richly linked landscape that grows slowly over time"_
+<p align='right'><em><b>Maggie Appleton</b></em></p> 
+```
 
 My main motivation is definitely to try and turn this space into a **_digital garden_**.
 
@@ -21,15 +24,21 @@ My main motivation is definitely to try and turn this space into a **_digital ga
 I am working within a JVM based team that focuses on programme metadata delivery utilizing microservice architecture in
 a serverless manner.
 
-> _o.O What?_ 
+```admonish question ""
+_o.O What?_
+```
 
 I help my team deliver TV & Non-TV schedules internally and externally with the help of Amazon Web Services.
 
-> _I guess that's a little better..._
+```admonish question ""
+_I guess that's a little better..._
+```
 
 I let you know when EastEnders is on TV :D
 
-> _Finally, he's speaking English!_
+```admonish question ""
+_Finally, he's speaking English!_
+```
 
 ### What are your interests?
 
