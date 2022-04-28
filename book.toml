@@ -19,7 +19,5 @@ additional-css = ['theme/css/mdbook-admonish.css']
 enable = true
 level = 4
 
-[preprocessor]
-
 [preprocessor.admonish]
 command = "mdbook-admonish"
