@@ -24,7 +24,7 @@
         - [Why I Don't Like Java Anymore](blog/tech/why-i-dont-like-java-anymore.md)
         - [Safety In... _Unsafe Rust?_]()
     - [Non-Tech]()
-        - [The Beauty Of Pingu]()
+        - [The Beauty Of Pingu](blog/non-tech/the-beauty-of-pingu.md)
 
 # ❗🇨 🇭 🇦 🇷 🇮 🇹 🇾
 
