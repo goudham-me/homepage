@@ -9,7 +9,9 @@ command-line applications. I've _always_ wanted a space other than Github to sho
 be showcasing my _absolute favourite_ ones here, so please check out
 my [GitHub](https://github.com/sgoudham?tab=repositories&type=source) to see all of them!
 
-> **Warning**: The older ones have a _significant_ drop in quality compared to the more recent ones.
+```admonish
+The older ones have a _significant_ drop in quality compared to the more recent ones.
+```
 
 Alas, here are some of my favourite personal projects! (in no particular order!)
 
