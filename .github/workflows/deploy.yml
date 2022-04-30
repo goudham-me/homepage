@@ -20,17 +20,17 @@ jobs:
       - name: Install mdbook
         run: |
           mkdir mdbook
-          curl -sSL "https://github.com/rust-lang/mdBook/releases/download/${{ env.MDBOOK-VERSION }}/mdbook-${{ env.MDBOOK-VERSION }}-x86_64-unknown-linux-gnu.tar.gz" | tar -xz --directory=./mdbook
+          curl -sSL https://github.com/rust-lang/mdBook/releases/download/${{ env.MDBOOK-VERSION }}/mdbook-${{ env.MDBOOK-VERSION }}-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=./mdbook
           echo `pwd`/mdbook >> $GITHUB_PATH
       - name: Install mdbook-admonish
         run: |
           mkdir mdbook-admonish
-          curl -sSL "https://github.com/tommilligan/mdbook-admonish/releases/download/${{ env.MDBOOK-ADMONISH-VERSION }}/mdbook-admonish-${{ env.MDBOOK-ADMONISH-VERSION }}-x86_64-unknown-linux-gnu.tar.gz" | tar -xz --directory=./mdbook-admonish
+          curl -sSL https://github.com/tommilligan/mdbook-admonish/releases/download/${{ env.MDBOOK-ADMONISH-VERSION }}/mdbook-admonish-${{ env.MDBOOK-ADMONISH-VERSION }}-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=./mdbook-admonish
           echo `pwd`/mdbook-admonish >> $GITHUB_PATH
       - name: Install mdbook-template
         run: |
           mkdir mdbook-template
-          curl -sSL "https://github.com/sgoudham/mdbook-template/releases/download/${{ env.MDBOOK-TEMPLATE-VERSION }}/mdbook-template-x86_64-unknown-linux-gnu.tar.gz" | tar -xz --directory=./mdbook-template
+          curl -sSL https://github.com/sgoudham/mdbook-template/releases/download/${{ env.MDBOOK-TEMPLATE-VERSION }}/mdbook-template-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=./mdbook-template
           echo `pwd`/mdbook-template >> $GITHUB_PATH
       - name: Build Digital Garden
         run: mdbook build
