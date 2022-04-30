@@ -6,6 +6,7 @@
 
 - [Hey 👋](index.md)
 - [Personal Projects 🦀](personal-projects.md)
+- [Adored Resources 📓]()
 - [FAQ 🙋]()
 
 ---
@@ -13,7 +14,6 @@
 # 🧠 My Second Brain 🧠
 
 - [My IdeaVim Config](my-second-brain/my-ideavim-config.md)
-- [Adored Resources 📓]()
 
 ---
 
@@ -25,7 +25,3 @@
         - [Safety In... _Unsafe Rust?_]()
     - [Non-Tech]()
         - [The Beauty Of Pingu](blog/non-tech/the-beauty-of-pingu.md)
-
-# ❗🇨 🇭 🇦 🇷 🇮 🇹 🇾
-
-- [Scottish !charity Overwatch Tournament]()
