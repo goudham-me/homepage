@@ -39,10 +39,10 @@ towards proficiency. Unfortunately, that feeling has shifted towards another lan
 
 ## It's Not You... It's Me!
 
-Yes. I'm **The Problem**
+Yes. I'm **The Problem**.
 
 I never thought in a million years that I would be showing interest in low-level code and the issues that only appear
-when you're that close to the metal. I'm pretty sure my Systems Programming lecturer is to blame for that one;
+when you're that close to the metal. I'm pretty sure my Systems Programming lecturer is to blame for that one.
 
 Systems Programming covered the C programming language in detail and how to design concurrent/parallel[^wut] code.
 Learning C and all the tradeoffs of higher-level vs lower level was entertaining! During this course, I realised that
@@ -99,7 +99,7 @@ Just keep an eye out for the upcoming blog post:
 
 :P
 
-<br> 
+### Footnotes
 
 [^wut]: What one is what again o.O
 
@@ -108,6 +108,4 @@ Just keep an eye out for the upcoming blog post:
 [^amber]: Check out [Project Amber](https://openjdk.java.net/projects/amber/). They're the main driver and advocate
 behind _"smaller, productivity-oriented Java language features."_
 
-- - - - 
-
-{{#include ../templates/footer.md}}
+{{#template ../../templates/footer.md path=../../images}}

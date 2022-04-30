@@ -199,6 +199,4 @@ nnoremap ,d :action DebugClass<CR>
 nnoremap ,D :action Debug<CR>
 ```
 
-- - - -
-
-{{#include templates/footer.md}}
+{{#template ../templates/footer.md path=../images}}

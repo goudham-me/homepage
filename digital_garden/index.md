@@ -46,8 +46,4 @@ My personal interests vary _a lot_ but are currently focused towards systems des
 such as **C**, **Go** & _especially_ 🦀 **Rust** 🦀 so you can expect a lot of blog posts in that domain... whenever I
 can be bothered to write them :P
 
-<br>
-
-- - - -
-
-{{#include templates/footer.md}}
+{{#template templates/footer.md path=images}}

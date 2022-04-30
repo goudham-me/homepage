@@ -14,3 +14,5 @@
 </div>
 
 > _**Pingu**_
+
+{{#template ../../templates/footer.md path=../../images}}

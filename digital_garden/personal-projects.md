@@ -122,8 +122,4 @@ At the time of writing, I'm at the beginning of my career, and I can't wait to d
 more rabbit holes that working on these projects allows me to! And, of course, I hope to bring _you_ along for the ride.
 Watch this space :D
 
-<br>
-
-- - - -
-
-{{#include templates/footer.md}}
+{{#template templates/footer.md path=images}}
