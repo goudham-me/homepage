@@ -8,7 +8,6 @@ on:
 env:
   MDBOOK-VERSION: v0.4.18
   MDBOOK-ADMONISH-VERSION: v1.6.0
-  MDBOOK-TEMPLATE-VERSION: v0.1.0
 
 jobs:
   deploy:
@@ -30,7 +29,7 @@ jobs:
       - name: Install mdbook-template
         run: |
           mkdir mdbook-template
-          curl -sSL https://github.com/sgoudham/mdbook-template/releases/download/${{ env.MDBOOK-TEMPLATE-VERSION }}/mdbook-template-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=./mdbook-template
+          curl -sSL https://github.com/sgoudham/mdbook-template/releases/latest/download/mdbook-template-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=./mdbook-template
           echo `pwd`/mdbook-template >> $GITHUB_PATH
       - name: Build Digital Garden
         run: mdbook build
