@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  MDBOOK-VERSION: v0.4.18
-  MDBOOK-ADMONISH-VERSION: v1.6.0
+  MDBOOK-VERSION: v0.4.21
+  MDBOOK-ADMONISH-VERSION: v1.7.0
 
 jobs:
   deploy:
