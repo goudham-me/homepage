@@ -7,20 +7,23 @@ multilingual = false
 src = "digital_garden"
 
 [output.html]
-default-theme = "ayu"
-preferred-dark-theme = "ayu"
+default-theme = "mocha"
+preferred-dark-theme = "mocha"
 no-section-label = true
 git-repository-url = "https://github.com/goudham-me/homepage"
 git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/goudham-me/homepage/edit/main/{path}"
-additional-css = ['theme/css/mdbook-admonish.css']
+additional-css = ['theme/css/mdbook-admonish.css', "./theme/catppuccin.css", "./theme/catppuccin-highlight.css"]
 
 [output.html.fold]
 enable = true
 level = 4
 
+[preprocessor.template]
+
 [preprocessor.admonish]
 command = "mdbook-admonish"
-assets_version = "1.0.0" # do not edit: managed by `mdbook-admonish install`
+assets_version = "2.0.0" # do not edit: managed by `mdbook-admonish install`
 
-[preprocessor.template]
+[preprocessor.catppuccin]
+assets_version = "0.1.0" # DO NOT EDIT: Managed by `mdbook-catppuccin install`
