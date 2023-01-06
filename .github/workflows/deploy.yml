@@ -71,7 +71,7 @@ jobs:
 
   sitemap:
     name: Generate Sitemap
-    needs: build
+    needs: deploy
     runs-on: ubuntu-latest
     env:
       STATIC-SITEMAP-CLI-VERSION: 2.1.2
