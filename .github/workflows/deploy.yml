@@ -7,7 +7,7 @@ on:
 
 env:
   MDBOOK-VERSION: v0.4.18
-  MDBOOK-ADMONISH-VERSION: v1.6.0
+  MDBOOK-ADMONISH-VERSION: v1.8.0
 
 jobs:
   deploy:
