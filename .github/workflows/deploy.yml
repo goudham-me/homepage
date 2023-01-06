@@ -91,7 +91,7 @@ jobs:
 
       - name: Generate Sitemap
         run: |
-          cd ./book/html
+          cd book
           npx sscli --base https://goudham.me
 
       - name: Store Sitemap
