@@ -13,30 +13,107 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+
+      - name: Restore mdBook Cache
+        id: cache-mdbook
+        uses: actions/cache@v3
         with:
-          fetch-depth: 0
+          path: ./mdbook
+          key: mdbook-${{ env.MDBOOK-VERSION }}
+
       - name: Install mdbook
+        if: steps.cache-mdbook.outputs.cache-hit != 'true'
         run: |
           mkdir mdbook
           curl -sSL https://github.com/rust-lang/mdBook/releases/download/${{ env.MDBOOK-VERSION }}/mdbook-${{ env.MDBOOK-VERSION }}-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=./mdbook
-          echo `pwd`/mdbook >> $GITHUB_PATH
+
+      - name: Restore mdbook-admonish Cache
+        id: cache-mdbook-admonish
+        uses: actions/cache@v3
+        with:
+          path: ./mdbook-admonish
+          key: mdbook-admonish-${{ env.MDBOOK-ADMONISH-VERSION }}
+
       - name: Install mdbook-admonish
+        if: steps.cache-mdbook-admonish.outputs.cache-hit != 'true'
         run: |
           mkdir mdbook-admonish
           curl -sSL https://github.com/tommilligan/mdbook-admonish/releases/download/${{ env.MDBOOK-ADMONISH-VERSION }}/mdbook-admonish-${{ env.MDBOOK-ADMONISH-VERSION }}-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=./mdbook-admonish
-          echo `pwd`/mdbook-admonish >> $GITHUB_PATH
+
+      - name: Restore mdbook-template Cache
+        id: cache-mdbook-template
+        uses: actions/cache@v3
+        with:
+          path: ./mdbook-template
+          key: mdbook-template
+
       - name: Install mdbook-template
+        if: steps.cache-mdbook-template.outputs.cache-hit != 'true'
         run: |
           mkdir mdbook-template
           curl -sSL https://github.com/sgoudham/mdbook-template/releases/latest/download/mdbook-template-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=./mdbook-template
+
+      - name: Update PATH
+        run: |
+          echo `pwd`/mdbook >> $GITHUB_PATH
+          echo `pwd`/mdbook-admonish >> $GITHUB_PATH
           echo `pwd`/mdbook-template >> $GITHUB_PATH
-      - name: Build Digital Garden
+
+      - name: Build Book
         run: mdbook build
-      - uses: garygrossgarten/github-action-scp@release
+
+      - name: Store HTML
+        uses: actions/upload-artifact@v3
         with:
-          local: book
-          remote: /var/www/goudham.me/html
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          privateKey: ${{ secrets.SSH_PRIVATE_KEY}}
+          name: book
+          path: ./book
+
+    sitemap:
+      name: Generate Sitemap
+      needs: build
+      runs-on: ubuntu-latest
+      env:
+        STATIC-SITEMAP-CLI-VERSION: 2.1.2
+
+      steps:
+        - name: Download HTML
+          uses: actions/download-artifact@v3
+          with:
+            name: book
+            path: ./book
+
+        # Unsure how to cache NPM
+        - name: Install Static Sitemap CLI
+          run: |
+            npm install npx
+            npm install static-sitemap-cli@${{ env.STATIC-SITEMAP-CLI-VERSION }}
+
+        - name: Generate Sitemap
+          run: |
+            cd ./book/html
+            npx sscli --base https://goudham.me
+
+        - name: Store Sitemap
+          uses: actions/upload-artifact@v3
+          with:
+            name: sitemap
+            path: ./book/sitemap.xml
+
+    publish:
+      name: Publish Website
+      needs: sitemap
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Download HTML & Sitemap
+          uses: actions/download-artifact@v3
+
+        - name: Move Sitemap Into HTML
+          run: mv ./sitemap/sitemap.xml ./book
+
+        - name: Publish to GitHub Pages
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./book
