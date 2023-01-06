@@ -69,51 +69,51 @@ jobs:
           name: book
           path: ./book
 
-    sitemap:
-      name: Generate Sitemap
-      needs: build
-      runs-on: ubuntu-latest
-      env:
-        STATIC-SITEMAP-CLI-VERSION: 2.1.2
+  sitemap:
+    name: Generate Sitemap
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      STATIC-SITEMAP-CLI-VERSION: 2.1.2
 
-      steps:
-        - name: Download HTML
-          uses: actions/download-artifact@v3
-          with:
-            name: book
-            path: ./book
+    steps:
+      - name: Download HTML
+        uses: actions/download-artifact@v3
+        with:
+          name: book
+          path: ./book
 
-        # Unsure how to cache NPM
-        - name: Install Static Sitemap CLI
-          run: |
-            npm install npx
-            npm install static-sitemap-cli@${{ env.STATIC-SITEMAP-CLI-VERSION }}
+      # Unsure how to cache NPM
+      - name: Install Static Sitemap CLI
+        run: |
+          npm install npx
+          npm install static-sitemap-cli@${{ env.STATIC-SITEMAP-CLI-VERSION }}
 
-        - name: Generate Sitemap
-          run: |
-            cd ./book/html
-            npx sscli --base https://goudham.me
+      - name: Generate Sitemap
+        run: |
+          cd ./book/html
+          npx sscli --base https://goudham.me
 
-        - name: Store Sitemap
-          uses: actions/upload-artifact@v3
-          with:
-            name: sitemap
-            path: ./book/sitemap.xml
+      - name: Store Sitemap
+        uses: actions/upload-artifact@v3
+        with:
+          name: sitemap
+          path: ./book/sitemap.xml
 
-    publish:
-      name: Publish Website
-      needs: sitemap
-      runs-on: ubuntu-latest
+  publish:
+    name: Publish Website
+    needs: sitemap
+    runs-on: ubuntu-latest
 
-      steps:
-        - name: Download HTML & Sitemap
-          uses: actions/download-artifact@v3
+    steps:
+      - name: Download HTML & Sitemap
+        uses: actions/download-artifact@v3
 
-        - name: Move Sitemap Into HTML
-          run: mv ./sitemap/sitemap.xml ./book
+      - name: Move Sitemap Into HTML
+        run: mv ./sitemap/sitemap.xml ./book
 
-        - name: Publish to GitHub Pages
-          uses: peaceiris/actions-gh-pages@v3
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./book
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./book
