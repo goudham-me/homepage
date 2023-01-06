@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Why I Don&#x27;t Like Java Anymore - Goudham&#x27;s Digital Garden</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A digital garden to store my ideas and thoughts">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../theme/css/mdbook-admonish.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">🌳 Goudham's Digital Garden 🌳</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../../index.html">Hey 👋</a></li><li class="chapter-item expanded "><a href="../../personal-projects.html">Personal Projects 🦀</a></li><li class="chapter-item expanded "><div>Adored Resources 📓</div></li><li class="chapter-item expanded "><div>FAQ 🙋</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">🧠 My Second Brain 🧠</li><li class="chapter-item expanded "><a href="../../my-second-brain/my-ideavim-config.html">My IdeaVim Config</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">📝 Musings 📝</li><li class="chapter-item expanded "><a href="../../blog.html">Blog</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><div>Tech</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../blog/tech/why-i-dont-like-java-anymore.html" class="active">Why I Don't Like Java Anymore</a></li><li class="chapter-item expanded "><div>Safety In... Unsafe Rust?</div></li></ol></li><li class="chapter-item expanded "><div>Non-Tech</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../blog/non-tech/the-beauty-of-pingu.html">The Beauty Of Pingu</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Goudham&#x27;s Digital Garden</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/goudham-me/homepage" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/goudham-me/homepage/edit/main/digital_garden/blog/tech/why-i-dont-like-java-anymore.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 align="center">Why I Don't Like Java... Anymore</h1>
+<div style="display: flex; justify-content: space-between; margin-bottom: -15px; margin-top: -25px">
+  <p><b>03/04/2022</b></p>
+  <p><b>Goudham Suresh</b></p>
+</div>
+<hr />
+<br>
+<div align="center">
+    <img src="../../images/blog/friendship_over_java.png" width="500">
+</div>
+<p>So...</p>
+<blockquote>
+<p><strong>I don't like Java anymore</strong></p>
+</blockquote>
+<p>And honestly, I'm kinda bummed about it.</p>
+<p>Java has the privilege (or not, depending on how you look at it) of being one of the first programming languages I
+interacted with. Throughout high school, we were taught... the monstrosity that
+is... <a href="https://ludovic.chabant.com/devblog/2010/01/09/visual-studio-express-limitations-lead-to-bad-practices//ceiling_cat_vs_express.jpg">Visual Basic 2010 Express.</a></p>
+<p><em><strong>shudders</strong></em></p>
+<p>Casting those years aside, Java stormed its way into my life in my final years of high school through a foundation
+apprenticeship that I was doing. I still vividly remember looking at some code on the lecturer's screen and thinking to
+myself...</p>
+<blockquote>
+<p>What the f**k is going on? private static void wha? new Scanner()? cLaSsEs &amp; oBjeCTs, what are those??????</p>
+</blockquote>
+<p>However, at the same time, I was... excited! Even though I didn't know how to define an arraylist of strings or read in
+files or whatever, some part of me was excited <em>because</em> I didn't know. It was an opportunity for me to learn and work
+towards proficiency. Unfortunately, that feeling has shifted towards another language as of late.</p>
+<p>🦀 <strong>Rust</strong> 🦀</p>
+<h2 id="its-not-you-its-me"><a class="header" href="#its-not-you-its-me">It's Not You... It's Me!</a></h2>
+<p>Yes. I'm <strong>The Problem</strong>.</p>
+<p>I never thought in a million years that I would be showing interest in low-level code and the issues that only appear
+when you're that close to the metal. I'm pretty sure my Systems Programming lecturer is to blame for that one.</p>
+<p>Systems Programming covered the C programming language in detail and how to design concurrent/parallel<sup class="footnote-reference"><a href="#wut">1</a></sup> code.
+Learning C and all the tradeoffs of higher-level vs lower level was entertaining! During this course, I realised that
+I <em>really</em> like breaking down the abstraction layers that we're all so comfortable with and understanding the intricate
+processes underneath the hood.</p>
+<p>After reaching that conclusion, I realised that Java's whole design philosophy doesn't match my personal interests
+anymore. The <em>whole point</em> of a language like Java is that you don't have to worry about optimising performance for
+embedded devices<sup class="footnote-reference"><a href="#java">2</a></sup> or manually managing memory. Whereas in a language like Rust, the challenges are closer to the
+hardware. Not to mention, the utterly different memory model involves reasoning about your code entirely differently.</p>
+<p>Spending free time in-between work and university on Rust has super-charged that feeling that I mentioned earlier. I'm
+still just a beginner, but I'm <em>excited</em> to learn more and understand more concepts.</p>
+<h2 id="what-java-version-are-we-on-again"><a class="header" href="#what-java-version-are-we-on-again">What Java Version Are We On Again?</a></h2>
+<p>While I might not have the motivation to be actively interested in Java within my spare time, that's not a reflection of
+how the language is developing! I'd argue that it's been in the best place since its inception.</p>
+<p>On 22nd March 2022, <a href="https://openjdk.java.net/projects/jdk/18/">Java 18</a> was released as a public release candidate,
+making it available for everyone; this marks the <em><strong>9th</strong></em> release under the new 6-month release cadence.</p>
+<p>There were some <em>really</em> neat features that got bundled with 18!</p>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+A simple webserver to serve static files!</li>
+<li><input disabled="" type="checkbox" checked=""/>
+UTF-8 encoding by default!</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Support code snippets in javadocs!</li>
+<li><input disabled="" type="checkbox" checked=""/>
+and more!</li>
+</ul>
+<p>The overall direction of the java language seems to be heading towards
+more <a href="https://openjdk.java.net/jeps/420">pattern matching</a> <sup class="footnote-reference"><a href="#amber">3</a></sup> features. I like to think this shows Java is not
+afraid to continue innovating and getting inspiration from other languages.</p>
+<p>In my humble opinion, I think the Java programming language is in a really great position to continue dominating the
+market as it has been for the past few decades!</p>
+<h2 id="so-wait-do-you-like-java-or-not"><a class="header" href="#so-wait-do-you-like-java-or-not">So Wait... Do You Like Java Or Not?</a></h2>
+<p>The title may be <em>slightly</em> misleading.</p>
+<p>If I was to rewrite the title right now. I would make it...</p>
+<blockquote>
+<p>Why I'm Not As Interested In Java Anymore</p>
+</blockquote>
+<p>I still work in the JVM based team, so I won't be actively avoiding Java anytime soon. In fact, I think it's headed in a
+really cool direction, and it's still the language that I'm most confident and proficient in. It just so happens to be
+that I prefer low-level systems languages now!</p>
+<p>Especially... 🦀 <strong>Rust</strong> 🦀</p>
+<p>Just keep an eye out for the upcoming blog post:</p>
+<blockquote>
+<p>Why I Don't Like Rust... Anymore</p>
+</blockquote>
+<p>:P</p>
+<h3 id="footnotes"><a class="header" href="#footnotes">Footnotes</a></h3>
+<div class="footnote-definition" id="wut"><sup class="footnote-definition-label">1</sup>
+<p>What one is what again o.O</p>
+</div>
+<div class="footnote-definition" id="java"><sup class="footnote-definition-label">2</sup>
+<p>Your first hurdle might be that you're trying to use Java on embedded devices :P</p>
+</div>
+<div class="footnote-definition" id="amber"><sup class="footnote-definition-label">3</sup>
+<p>Check out <a href="https://openjdk.java.net/projects/amber/">Project Amber</a>. They're the main driver and advocate
+behind <em>&quot;smaller, productivity-oriented Java language features.&quot;</em></p>
+</div>
+<br> 
+<hr />
+<div style="text-align: center; padding-top: 8px">
+    <a style="padding-left: 4px; padding-right: 4px" href="https://github.com/sgoudham" target="_blank" rel="noopener noreferrer"><img src="../../images/icons/github.png"></a>
+    <a style="padding-left: 4px; padding-right: 4px" href="https://linkedin.com/in/sgoudham" target="_blank" rel="noopener noreferrer"><img src="../../images/icons/linkedin.png"></a>
+    <a style="padding-left: 4px; padding-right: 4px" href="https://twitter.com/RealGoudham" target="_blank" rel="noopener noreferrer"><img src="../../images/icons/twitter.png"></a>
+    <a style="padding-left: 4px; padding-right: 4px" href="https://discord.bio/p/hammy" target="_blank" rel="noopener noreferrer"><img src="../../images/icons/discord.png"></a>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../blog.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../blog/non-tech/the-beauty-of-pingu.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../blog.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../blog/non-tech/the-beauty-of-pingu.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

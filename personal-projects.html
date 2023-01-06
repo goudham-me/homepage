@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Personal Projects 🦀 - Goudham&#x27;s Digital Garden</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A digital garden to store my ideas and thoughts">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/css/mdbook-admonish.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">🌳 Goudham's Digital Garden 🌳</li><li class="spacer"></li><li class="chapter-item expanded "><a href="index.html">Hey 👋</a></li><li class="chapter-item expanded "><a href="personal-projects.html" class="active">Personal Projects 🦀</a></li><li class="chapter-item expanded "><div>Adored Resources 📓</div></li><li class="chapter-item expanded "><div>FAQ 🙋</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">🧠 My Second Brain 🧠</li><li class="chapter-item expanded "><a href="my-second-brain/my-ideavim-config.html">My IdeaVim Config</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">📝 Musings 📝</li><li class="chapter-item expanded "><a href="blog.html">Blog</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><div>Tech</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="blog/tech/why-i-dont-like-java-anymore.html">Why I Don't Like Java Anymore</a></li><li class="chapter-item expanded "><div>Safety In... Unsafe Rust?</div></li></ol></li><li class="chapter-item expanded "><div>Non-Tech</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="blog/non-tech/the-beauty-of-pingu.html">The Beauty Of Pingu</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Goudham&#x27;s Digital Garden</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/goudham-me/homepage" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/goudham-me/homepage/edit/main/digital_garden/personal-projects.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 align="center">Personal Projects 🦀</h1>
+<div align="center">
+    <img src="images/projects/macbook.png">
+</div>
+<p>I have developed quite a few projects over the last few years, varying from discord bots to public libraries to
+command-line applications. I've <em>always</em> wanted a space other than Github to showcase them... so here we are. I'll only
+be showcasing my <em>absolute favourite</em> ones here, so please check out
+my <a href="https://github.com/sgoudham?tab=repositories&amp;type=source">GitHub</a> to see all of them!</p>
+<div id="admonition-note" class="admonition note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="#admonition-note"></a></p>
+</div>
+<div>
+<p>The older ones have a <em>significant</em> drop in quality compared to the more recent ones.</p>
+</div>
+</div>
+<p>Alas, here are some of my favourite personal projects! (in no particular order!)</p>
+<h2 id="uwuifyy"><a class="header" href="#uwuifyy"><a href="https://github.com/sgoudham/uwuifyy" target="_blank">uwuifyy</a></a></h2>
+<p><a href="https://github.com/sgoudham/uwuifyy/actions/workflows/build.yml"><img src="https://github.com/sgoudham/uwuifyy/actions/workflows/build.yml/badge.svg" alt="build" /></a>
+<a href="https://crates.io/crates/uwuifyy"><img src="https://img.shields.io/crates/v/uwuifyy" alt="crate.io" /></a>
+<a href="https://crates.io/crates/uwuifyy"><img src="https://img.shields.io/crates/d/uwuifyy" alt="downloads" /></a>
+<a href="https://github.com/sgoudham/uwuifyy/blob/main/LICENSE"><img src="https://img.shields.io/github/license/sgoudham/uwuifyy" alt="license" /></a></p>
+<blockquote>
+<p>A robust, customizable, blazingly-fast, efficient and easy-to-use command line application to uwu'ify your text!</p>
+</blockquote>
+<h3 id="notes"><a class="header" href="#notes">Notes</a></h3>
+<p><code>uwuifyy</code> holds a special place in my heart out of all the personal projects I've started. Besides being my first Rust
+crate that I published, it was my first time interacting with online developers who wanted to contribute to the
+project. (I also think it's my most <em>professional</em> looking project...)</p>
+<h2 id="rall"><a class="header" href="#rall"><a href="https://github.com/sgoudham/rall" target="_blank">rall</a></a></h2>
+<p><strong><em>Really...? Another Logging Library?</em></strong></p>
+<p><a href="https://github.com/sgoudham/rall/actions/workflows/build.yml"><img src="https://github.com/sgoudham/rall/actions/workflows/build.yml/badge.svg?branch=main" alt="build" /></a>
+<a href="https://crates.io/crates/rall"><img src="https://img.shields.io/crates/v/rall" alt="crate.io" /></a>
+<a href="https://crates.io/crates/rall"><img src="https://img.shields.io/crates/d/rall" alt="downloads" /></a>
+<a href="https://github.com/sgoudham/rall/blob/main/LICENSE"><img src="https://img.shields.io/github/license/sgoudham/rall" alt="license" /></a></p>
+<blockquote>
+<p>rall is an incredibly simple and intuitive logger, consider this crate a <em>failure</em> if you can't get setup within <strong>30 seconds!</strong></p>
+</blockquote>
+<h3 id="notes-1"><a class="header" href="#notes-1">Notes</a></h3>
+<p>The name for this project is something I feel like everyone thinks nowadays, with an abundance of logging/monitoring
+tools and libraries that we as software engineers have access to. The library itself does not claim to do anything
+special or fancy. My goals were to understand API design more and experiment with exposing different APIs and see what
+works. It was also a great excuse to delve more into Rust during University time, especially Rust macros.</p>
+<h2 id="bst-rs"><a class="header" href="#bst-rs"><a href="https://github.com/sgoudham/bst-rs" target="_blank">bst-rs</a></a></h2>
+<p><a href="https://github.com/sgoudham/bst-rs/actions/workflows/build.yml"><img src="https://github.com/sgoudham/bst-rs/actions/workflows/build.yml/badge.svg" alt="build" /></a>
+<a href="https://crates.io/crates/bst-rs"><img src="https://img.shields.io/crates/v/bst-rs" alt="crate.io" /></a>
+<a href="https://crates.io/crates/bst-rs"><img src="https://img.shields.io/crates/d/bst-rs" alt="downloads" /></a>
+<a href="https://github.com/sgoudham/bst-rs/blob/main/LICENSE"><img src="https://img.shields.io/github/license/sgoudham/bst-rs" alt="license" /></a></p>
+<blockquote>
+<p>Recursive &amp; Iterative Binary Search Tree Implementations within Rust</p>
+</blockquote>
+<h3 id="notes-2"><a class="header" href="#notes-2">Notes</a></h3>
+<p>Probably the most frustrating project so far as I'm still very early in my Rust journey and found it quite difficult
+<em>'fighting with the borrow checker'</em> to try and code to compile. However, it was fascinating taking a concept I knew
+reasonably well and had implemented in other languages... Only to find out that the implementation I had ported over was
+inherently <em>memory unsafe</em>, so the compiler rejected it. To summarise this project in 3 words, I would say <em>**
+fascinating but frustrating**</em>.</p>
+<h2 id="winston"><a class="header" href="#winston"><a href="https://github.com/sgoudham-university/winston-bot" target="_blank">Winston</a></a></h2>
+<p><a href="https://goudham.me/jenkins/job/sgoudham-university/job/Winston-Bot/job/main/lastBuild/"><img src="https://goudham.me/jenkins/job/sgoudham-university/job/Winston-Bot/job/main/badge/icon" alt="build-status" /></a>
+<a href="https://codecov.io/gh/sgoudham-university/Winston-Bot"><img src="https://codecov.io/gh/sgoudham-university/Winston-Bot/branch/main/graph/badge.svg?token=Q40v3fyItO" alt="codecov" /></a>
+<img src="https://img.shields.io/badge/version-v1.2.0-informational" alt="version" /></p>
+<blockquote>
+<p>A Powerful Music Discord Bot</p>
+</blockquote>
+<h3 id="notes-3"><a class="header" href="#notes-3">Notes</a></h3>
+<p>Initially, this bot was created during the &quot;How To Learn A New Language&quot; University course and (tried) to retrieve
+player statistics about Overwatch players. It wasn't the best as there was no official API. I eventually took the bot
+and started anew with an entirely new goal of a music bot. Winston stands out because it's the first time I created my
+own java annotations and used <a href="https://micronaut.io/">Micronaut</a> for my personal Java projects.</p>
+<h2 id="myclipboard"><a class="header" href="#myclipboard"><a href="https://github.com/sgoudham/MyClipboard" target="_blank">MyClipboard</a></a></h2>
+<p><img src="https://img.shields.io/maven-central/v/me.goudham/MyClipboard" alt="maven-central" />
+<a href="https://goudham.me/jenkins/job/sgoudham/job/MyClipboard/job/release/lastBuild/"><img src="https://goudham.me/jenkins/job/sgoudham/job/MyClipboard/job/release/badge/icon" alt="build-status" /></a>
+<a href="https://codecov.io/gh/sgoudham/MyClipboard"><img src="https://codecov.io/gh/sgoudham/MyClipboard/branch/main/graph/badge.svg?token=F4LKql7rIq" alt="codecov" /></a>
+<a href="https://github.com/sgoudham/MyClipboard/blob/main/LICENSE"><img src="https://img.shields.io/github/license/sgoudham/MyClipboard" alt="license" /></a></p>
+<blockquote>
+<p>Utility Library to Access and Manipulate the Default System Clipboard</p>
+</blockquote>
+<h3 id="notes-4"><a class="header" href="#notes-4">Notes</a></h3>
+<p>The inspiration for this project stems from my frustration with Macs and how they didn't have the same default clipboard
+functionality as Windows. The overall plan was to create a library and then a
+GUI (<a href="https://github.com/sgoudham/MyClipboardHistory">MyClipboardHistory</a>) to interface with it. I learned a lot about
+threading and spawning/existing background threads and started to get into API design. Unfortunately, I don't think it's
+very robust as Windows 11 has since come out, and I don't think this library works for that.</p>
+<h2 id="mywaifuwrapper"><a class="header" href="#mywaifuwrapper"><a href="https://github.com/sgoudham/MyWaifuWrapper" target="_blank">MyWaifuWrapper</a></a></h2>
+<p><img src="https://img.shields.io/maven-central/v/me.goudham/MyWaifuWrapper" alt="maven-central" />
+<a href="https://goudham.me/jenkins/job/sgoudham/job/MyWaifuWrapper/job/release/lastBuild/"><img src="https://goudham.me/jenkins/job/sgoudham/job/MyWaifuWrapper/job/release/badge/icon" alt="build-status" /></a>
+<a href="https://codecov.io/gh/sgoudham/MyWaifuWrapper"><img src="https://codecov.io/gh/sgoudham/MyWaifuWrapper/branch/main/graph/badge.svg?token=RxUDnCWnF0" alt="codecov" /></a>
+<a href="https://github.com/sgoudham/MyWaifuWrapper/blob/main/LICENSE"><img src="https://img.shields.io/github/license/sgoudham/MyWaifuWrapper" alt="license" /></a></p>
+<blockquote>
+<p>An Unofficial Asynchronous Java API Wrapper for MyWaifuList</p>
+</blockquote>
+<h3 id="notes-5"><a class="header" href="#notes-5">Notes</a></h3>
+<p>I believe this was my first project that actually exposed an API for clients to potentially use. I remember thinking
+about how users would want to use the library, which I had no prior experience. One of the main highlights of this
+project was getting to know more about jackson and serializing/de-serializing data into POJO's through annotations. An
+enjoyable first project :D</p>
+<h2 id="final-thoughts"><a class="header" href="#final-thoughts">Final Thoughts</a></h2>
+<p>I wouldn't say any of the projects listed above are <strong>that</strong> impressive or mind-blowing, but they all have played a
+pivotal role in building up the understanding that I have now.</p>
+<p>At the time of writing, I'm at the beginning of my career, and I can't wait to develop further and dive into more and
+more rabbit holes that working on these projects allows me to! And, of course, I hope to bring <em>you</em> along for the ride.
+Watch this space :D</p>
+<br> 
+<hr />
+<div style="text-align: center; padding-top: 8px">
+    <a style="padding-left: 4px; padding-right: 4px" href="https://github.com/sgoudham" target="_blank" rel="noopener noreferrer"><img src="images/icons/github.png"></a>
+    <a style="padding-left: 4px; padding-right: 4px" href="https://linkedin.com/in/sgoudham" target="_blank" rel="noopener noreferrer"><img src="images/icons/linkedin.png"></a>
+    <a style="padding-left: 4px; padding-right: 4px" href="https://twitter.com/RealGoudham" target="_blank" rel="noopener noreferrer"><img src="images/icons/twitter.png"></a>
+    <a style="padding-left: 4px; padding-right: 4px" href="https://discord.bio/p/hammy" target="_blank" rel="noopener noreferrer"><img src="images/icons/discord.png"></a>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="my-second-brain/my-ideavim-config.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="my-second-brain/my-ideavim-config.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
