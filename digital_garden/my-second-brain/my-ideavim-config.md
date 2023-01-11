@@ -20,7 +20,7 @@ Anyway, as the title promises, here's my custom config!
 
 ## Custom Config
 
-```shell
+```vim
 "" Difference between all the different maps:
 ""   https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
 "" Ideavim actionlist:
@@ -36,7 +36,7 @@ Anyway, as the title promises, here's my custom config!
 ""  ---
 ""  Manage Projects -> <A-p>
 ""  ActivateTerminalToolWindow -> <A-t>
-""  Hide Active Window -> <A-ESC>
+""  Hide Active Window -> Alt + Shift + h
 ""  ---
 ""  UNBIND default <C-n>
 
@@ -74,6 +74,7 @@ set quickscope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let g:qs_primary_color = '#e64553'
 let g:qs_secondary_color = '#fe640b'
+let g:qs_accepted_chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '{', '}', '[', ']', '<', '>']
 
 "" Options
 set notimeout
@@ -95,7 +96,6 @@ set tm=500
 set scrolloff=8
 
 "" Mappings
-
 " 0 -> first non-blank character
 map 0 ^
 
