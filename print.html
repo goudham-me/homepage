@@ -316,182 +316,183 @@ It's pretty amazing, and I've been using it for the past 2 years. I'd heavily en
 you haven't already :D - The power and flexibility is just unmatched.</p>
 <p>Anyway, as the title promises, here's my custom config!</p>
 <h2 id="custom-config"><a class="header" href="#custom-config">Custom Config</a></h2>
-<pre><code class="language-shell">&quot; =================== KNOWLEDGE =======================
+<pre><code class="language-shell">&quot;&quot; Difference between all the different maps:
+&quot;&quot;   https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
+&quot;&quot; Ideavim actionlist:
+&quot;&quot;   https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
+&quot;&quot; List of supported plugins:
+&quot;&quot;   https://github.com/JetBrains/ideavim/wiki/Emulated-plugins
+&quot;&quot;   https://betterprogramming.pub/the-essential-ideavim-plugins-f939b4325180
 
-&quot; Difference between all the different maps:
-&quot;   https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
-&quot; Ideavim actionlist:
-&quot;   https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
-&quot; List of supported plugins:
-&quot;   https://github.com/JetBrains/ideavim/wiki/Emulated-plugins
-&quot;   https://betterprogramming.pub/the-essential-ideavim-plugins-f939b4325180
-&quot;
+&quot;&quot; Good Keyboard Shortcut Rebinds:
+&quot;&quot;  &lt;Up&gt; -&gt; &lt;A-k&gt;
+&quot;&quot;  &lt;Down&gt; -&gt; &lt;A-j&gt;
+&quot;&quot;  &lt;Alt+Insert&gt; -&gt; &lt;A+n&gt;
+&quot;&quot;  ---
+&quot;&quot;  Manage Projects -&gt; &lt;A-p&gt;
+&quot;&quot;  ActivateTerminalToolWindow -&gt; &lt;A-t&gt;
+&quot;&quot;  Hide Active Window -&gt; &lt;A-ESC&gt;
+&quot;&quot;  ---
+&quot;&quot;  UNBIND default &lt;C-n&gt;
 
-&quot; Map leader key is set to ';'
-let leader = &quot;;&quot;
+&quot;&quot; Set Handlers
+sethandler &lt;S-Tab&gt; a:vim
+sethandler &lt;C-A&gt; a:ide
+sethandler &lt;C-C&gt; a:ide
+sethandler &lt;C-D&gt; a:vim
+sethandler &lt;C-H&gt; a:vim
+sethandler &lt;C-I&gt; a:vim
+sethandler &lt;C-J&gt; a:vim
+sethandler &lt;A-J&gt; a:vim
+sethandler &lt;C-N&gt; a:vim
+sethandler &lt;C-O&gt; a:vim
+sethandler &lt;C-P&gt; a:vim
+sethandler &lt;C-Q&gt; a:vim
+sethandler &lt;C-T&gt; a:vim
+sethandler &lt;C-U&gt; a:vim
+sethandler &lt;C-V&gt; a:ide
 
-&quot; =================== PLUGINS =========================
+let mapleader = &quot; &quot;
 
-&quot; Surround words very easily with characters
-&quot;   https://github.com/tpope/vim-surround
-Plug 'tpope/vim-surround'
+&quot;&quot; Emulated plugins
 
-&quot; Emulate NERDTree
-&quot;   https://github.com/preservim/nerdtree
-Plug 'preservim/nerdtree'
+&quot; use 'c|d|yia' to c|d|y inner arguments
+set argtextobj
+let g:argtextobj_pairs=&quot;(:),{:},&lt;:&gt;,[:]&quot;
+set commentary
+set highlightedyank
+set NERDTree
+set surround
+set textobj-entire
+set which-key
+set quickscope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+let g:qs_primary_color = '#e64553'
+let g:qs_secondary_color = '#fe640b'
 
-&quot; Allows for easy commenting with 'gcc'
-&quot;   https://github.com/tpope/vim-commentary
-Plug 'tpope/vim-commentary'
-
-&quot; Swap two words easily
-&quot;   https://github.com/tommcdo/vim-exchange
-Plug 'tommcdo/vim-exchange'
-
-&quot; =================== GENERAL CONFIG ==================
-
-&quot;Enable relative line numbering
-set number relativenumber
-
-&quot; Shows what mode Vim is in at the bottom of intellij
-set showmode
-
-&quot; Uses the joining functionality from Intellij
+&quot;&quot; Options
+set notimeout
+set smartcase
+set incsearch
+set relativenumber
+set number
 set ideajoin
-
+set showcmd
+set showmode
 &quot; Stay in the mode in which the editing started
 set idearefactormode=keep
 
-&quot; See how many lines of history VIM has to remember
-set history=500
-
-&quot; ================== VIM USER INTERFACE =================
-
-&quot; Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
-
-&quot; Always show current position
-set ruler
-
-&quot; Configure backspace so it acts as it should act
-set backspace=eol,start,indent
-set whichwrap+=&lt;,&gt;,h,l
-
-&quot; Ignore case when searching
-set ignorecase
-
-&quot; When searching try to be smart about cases
-set smartcase
-
-&quot; Makes search act like search in modern browsers
-set incsearch
-
-&quot; Don't redraw while executing macros (good performance config)
-set lazyredraw
-
-&quot; For regular expressions turn magic on
-set magic
-
-&quot; Show matching brackets when text indicator is over them
-set showmatch
-
-&quot; How many tenths of a second to blink when matching brackets
-set mat=2
-
-&quot; Speed up scrolling in Vim 
-set ttyfast 
-
 &quot; No annoying sound on errors
 set visualbell
-set t_vb=
 set tm=500
 
-&quot; ==================== TEXT, TAB AND INDENT RELATED ====================
+&quot; Set scrolloff
+set scrolloff=8
 
-&quot; Use spaces instead of tabs
-set expandtab
+&quot;&quot; Mappings
 
-&quot; Be smart when using tabs ;)
-set smarttab
+&quot; 0 -&gt; first non-blank character
+map 0 ^
 
-&quot; 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+&quot; Center buffer when navigating
+nmap &lt;C-u&gt; &lt;C-u&gt;zz
+nmap &lt;C-d&gt; &lt;C-d&gt;zz
+nmap n nzzzv
+nmap N Nzzzv
 
-&quot; Linebreak on 500 characters
-set lbr
-set tw=500
+&quot; Workaround for unifying navigation history:
+&quot; https://youtrack.jetbrains.com/issue/VIM-44/Unify-navigation-history-between-ideavim-and-idea&quot;
+nmap &lt;C-o&gt; &lt;Action&gt;(Back)
+nmap &lt;C-i&gt; &lt;Action&gt;(Forward)
 
-set ai &quot;Auto indent
-set si &quot;Smart indent
-set wrap &quot;Wrap lines
+&quot; Navigate project errors
+map [d &lt;Action&gt;(GotoPreviousError)
+map ]d &lt;Action&gt;(GotoNextError)
 
-&quot; =============== MOVING AROUND, TABS, WINDOWS AND BUFFERS ========
+&quot; Navigate git changes
+map [c &lt;Action&gt;(VcsShowPrevChangeMarker)
+map ]c &lt;Action&gt;(VcsShowNextChangeMarker)
 
-&quot; Exit in and out of insert mode easily
-imap jj &lt;Esc&gt;
-imap jk &lt;Esc&gt;
-imap JJ &lt;Esc&gt;
-imap JK &lt;Esc&gt;
+&quot; Navigate methods
+map [m &lt;Action&gt;(MethodUp)
+map ]m &lt;Action&gt;(MethodDown)
+
+&quot; Show hoverdoc
+map H &lt;Action&gt;(ShowErrorDescription)
 
 &quot; Shortcutting split navigation
-map &lt;c-h&gt; &lt;C-w&gt;h
-map &lt;c-j&gt; &lt;C-w&gt;j
-map &lt;c-k&gt; &lt;C-w&gt;k
-map &lt;c-l&gt; &lt;C-w&gt;l
+map &lt;a-h&gt; &lt;C-w&gt;h
+map &lt;a-j&gt; &lt;C-w&gt;j
+map &lt;a-k&gt; &lt;C-w&gt;k
+map &lt;a-l&gt; &lt;C-w&gt;l
 
-&quot; Move a line of text using ALT+[nm]
-map &lt;a-n&gt; :m +1&lt;CR&gt;
-map &lt;a-m&gt; :m -2&lt;CR&gt;
-
-&quot; Tab navigation
-nnoremap &lt;a-l&gt; :action NextTab&lt;CR&gt;
-nnoremap &lt;a-h&gt; :action PreviousTab&lt;CR&gt;
-nnoremap &lt;c-\&gt; :action SplitVertically&lt;CR&gt;
-nnoremap &lt;c--&gt; :action SplitHorizontally&lt;CR&gt;
-nnoremap &lt;c-=&gt; :action Unsplit&lt;CR&gt;
-nnoremap &lt;c-m&gt; :action MoveEditorToOppositeTabGroup&lt;CR&gt;
+&quot; Bye bye
+map &lt;leader&gt;q &lt;Action&gt;(CloseContent)
+map &lt;leader&gt;Q &lt;Action&gt;(CloseAllEditors)
+map &lt;leader&gt;h &lt;Action&gt;(HideAllWindows)
 
 &quot; Focus project window
-nnoremap &lt;c-n&gt; :NERDTreeFocus&lt;CR&gt;
+map &lt;leader&gt;e :NERDTreeFocus&lt;CR&gt;
+
+&quot; File navigation
+map &lt;leader&gt;ff &lt;Action&gt;(GotoFile)
+map &lt;leader&gt;fg &lt;Action&gt;(FindInPath)
+map &lt;leader&gt;fm &lt;Action&gt;(MainMenu)
+map &lt;leader&gt;fr &lt;Action&gt;(RecentFiles)
+map &lt;leader&gt;fp &lt;Action&gt;(ManageRecentProjects)
+map &lt;leader&gt;&lt;leader&gt; &lt;Action&gt;(SearchEverywhere)
+
+&quot; Experiment
+map &lt;leader&gt; &lt;Action&gt;(MainMenu)
+
+&quot; Tab navigation
+map &lt;Tab&gt; &lt;Action&gt;(NextTab)
+map &lt;S-Tab&gt; &lt;Action&gt;(PreviousTab)
 
 &quot; Keep visual selection
 vnoremap &lt; &lt;gv
 vnoremap &gt; &gt;gv
 
-&quot; Navigate through method signatures
-map [[ &lt;Action&gt;(MethodUp)
-map ]] &lt;Action&gt;(MethodDown)
+&quot; LSP stuffs
+map &lt;leader&gt;lo &lt;Action&gt;(OptimizeImports)
+map &lt;leader&gt;lf &lt;Action&gt;(ReformatCode)
+map &lt;leader&gt;lr &lt;Action&gt;(RenameElement)
+map &lt;leader&gt;la &lt;Action&gt;(ShowIntentionActions)
+map gt &lt;Action&gt;(GotoTest)
+map gs &lt;Action&gt;(GotoSuperMethod)
+map gI &lt;Action&gt;(GotoImplementation)
 
-&quot; ================= EDITING MAPPINGS ===================
+&quot; Debugging stuffs
+map &lt;leader&gt;dt &lt;Action&gt;(ToggleLineBreakpoint)
+map &lt;leader&gt;db &lt;Action&gt;(ViewBreakpoints)
+map &lt;leader&gt;ds &lt;Action&gt;(ContextDebug)
+map &lt;leader&gt;df &lt;Action&gt;(ChooseDebugConfiguration)
+map &lt;leader&gt;rs &lt;Action&gt;(ContextRun)
+map &lt;leader&gt;rc &lt;Action&gt;(RunClass)
+map &lt;leader&gt;rf &lt;Action&gt;(ChooseRunConfiguration)
 
-&quot; Remap VIM 0 to first non-blank character
-map 0 ^
+&quot; Git stuffs
+map &lt;leader&gt;g &lt;Action&gt;(ActivateCommitToolWindow)
 
-&quot; Code refactoring
-nnoremap gs :action GotoSuperMethod&lt;CR&gt;
-nnoremap gd :action GotoDeclaration&lt;CR&gt;
-nnoremap gi :action GotoImplementation&lt;CR&gt;
-nnoremap gt :action GotoTest&lt;CR&gt;
-nnoremap ge :action GotoNextError&lt;CR&gt;
-nnoremap gE :action GotoPreviousError&lt;CR&gt;
-nnoremap ff :action SearchEverywhere&lt;CR&gt;
-nnoremap fc :action ReformatCode&lt;CR&gt;
-nnoremap ;r :action RenameElement&lt;CR&gt;
-nnoremap ;t :action ActivateTerminalToolWindow&lt;CR&gt;
-nnoremap ;b :action Vcs.RollbackChangedLines&lt;CR&gt;
-nnoremap ;f :action RenameFile&lt;CR&gt;
-nnoremap ;h :action HideAllWindows&lt;CR&gt;
-nnoremap ;o :action OptimizeImports&lt;CR&gt;
-nnoremap ;c :action CloseAllEditorsButActive&lt;CR&gt;
-nnoremap ;e :action CloseEditor&lt;CR&gt;
-nnoremap &lt;space&gt;&lt;space&gt; :action ShowErrorDescription&lt;CR&gt;
+&quot; Hello terminal :D
+map &lt;leader&gt;t &lt;Action&gt;(ActivateTerminalToolWindow)
 
-nnoremap ,u :action Rerun&lt;CR&gt;
-nnoremap ,r :action RunClass&lt;CR&gt;
-nnoremap ,R :action Run&lt;CR&gt;
-nnoremap ,d :action DebugClass&lt;CR&gt;
-nnoremap ,D :action Debug&lt;CR&gt;
+&quot; Open ideavimrc
+map &lt;leader&gt;; :e ~/.config/ideavim/ideavimrc&lt;CR&gt;
+
+&quot; Alt+j/k for autocompletion popup
+inoremap &lt;A-j&gt; &lt;C-n&gt;
+inoremap &lt;A-k&gt; &lt;C-p&gt;
+
+&quot; Shhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+&quot; https://youtrack.jetbrains.com/issue/VIM-1341/gx-should-open-selection-in-browser
+nnoremap gx gd
+
+&quot; Zen mode
+map &lt;leader&gt;zz &lt;Action&gt;(TogglePresentationMode)
+
+&quot; Vim search is simply outclassed here
+map / &lt;Action&gt;(Find)
 </code></pre>
 <br> 
 <hr />
