@@ -157,7 +157,7 @@ It's pretty amazing, and I've been using it for the past 2 years. I'd heavily en
 you haven't already :D - The power and flexibility is just unmatched.</p>
 <p>Anyway, as the title promises, here's my custom config!</p>
 <h2 id="custom-config"><a class="header" href="#custom-config">Custom Config</a></h2>
-<pre><code class="language-shell">&quot;&quot; Difference between all the different maps:
+<pre><code class="language-vim">&quot;&quot; Difference between all the different maps:
 &quot;&quot;   https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping
 &quot;&quot; Ideavim actionlist:
 &quot;&quot;   https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
@@ -172,7 +172,7 @@ you haven't already :D - The power and flexibility is just unmatched.</p>
 &quot;&quot;  ---
 &quot;&quot;  Manage Projects -&gt; &lt;A-p&gt;
 &quot;&quot;  ActivateTerminalToolWindow -&gt; &lt;A-t&gt;
-&quot;&quot;  Hide Active Window -&gt; &lt;A-ESC&gt;
+&quot;&quot;  Hide Active Window -&gt; Alt + Shift + h
 &quot;&quot;  ---
 &quot;&quot;  UNBIND default &lt;C-n&gt;
 
@@ -210,6 +210,7 @@ set quickscope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let g:qs_primary_color = '#e64553'
 let g:qs_secondary_color = '#fe640b'
+let g:qs_accepted_chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '{', '}', '[', ']', '&lt;', '&gt;']
 
 &quot;&quot; Options
 set notimeout
@@ -231,7 +232,6 @@ set tm=500
 set scrolloff=8
 
 &quot;&quot; Mappings
-
 &quot; 0 -&gt; first non-blank character
 map 0 ^
 
